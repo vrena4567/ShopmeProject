@@ -16,9 +16,9 @@ public class User {
     @Column(length = 64, nullable = false)
     private String password;
     @Column(name = "first_name", length = 45, nullable = false)
-    private String firstname;
+    private String firstName;
     @Column(name = "last_name", length = 45, nullable = false)
-    private String lastname;
+    private String lastName;
     @Column(length = 64)
     private String photos;
     private boolean enabled;
@@ -33,11 +33,11 @@ public class User {
 
     public User() {
     }
-    public User(String email, String password, String firstname, String lastname) {
+    public User(String email, String password, String firstName, String lastName) {
         this.email = email;
         this.password = password;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Integer getId() {
@@ -64,20 +64,20 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPhotos() {
@@ -112,8 +112,8 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", firstname='" + firstName + '\'' +
+                ", lastname='" + lastName + '\'' +
                 ", roles=" + roles +
                 '}';
     }
