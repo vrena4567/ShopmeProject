@@ -173,7 +173,11 @@
                 form.submit();
             } else if (response == "Duplicated") {
                 showModalDialog("Warning", "This email address '" + userEmail + "' is already used by an other user.")
+            } else {
+                showModalDialog("Error", "Unknown response from server");
             }
+        }).fail(function (){
+            showModalDialog("Error", "Could not connect to the server");
         });
 
         return false;
